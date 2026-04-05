@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fonte e cores principais*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5b4c49;
+    color: white;
+    line-height: 1.6;
+}
+
+/*tema claro*/
+body.light {
+    background-color: #ffecd0;
+    color: #000000;
+}
+
+/*layout em linha usando Flexbox*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/*estilo titulo*/
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*memnu horizontal com espaçamento*/
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/*links menu*/
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #639855;
+}
+
+/*menu modo claro*/
+body.light .nav a {
+    color: #000000;
+}
+
+body.light .nav a:hover {
+    color: #639855;
+}
+
+/*seção inicial*/
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/*título principal*/
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/*espaçamento textos*/
+.hero p {
+    margin-bottom: 20px;
+}
+
+/*estilo botões*/
+.btn-principal {
+    background-color: rgb(145, 26, 26);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/*botão interativ*/
+#btn-acao {
+    position: absolute;
+    transition: left 0.3s ease, top 0.3s ease;
+
+    
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+/*botao tema*/
+.tema-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#tema-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#tema-toggle:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/*tema claro*/
+body.light #tema-toggle {
+    background-color: #d1b48d;
+    color: #111;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/*cor fundo*/
+.sobre {
+    background-color: #3a2a27;
+}
+
+.interacao {
+    background-color: #2a1a16;
+}
+
+/*texto*/
+#cont-dinamico {
+    margin-bottom: 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/*texto destaque*/
+.destaque {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #cab69b;
+}
+
+/*limit largura*/
+section p {
+    max-width: 600px;
+    margin: 0 auto 10px;
+    line-height: 1.5;
+}
+
+/*modo claro*/
+body.light .sobre {
+    background-color: #f2dec3;
+}
+
+body.light .interacao {
+    background-color: #e5d1b6;
+}
+
+body.light .destaque {
+    color: #7a5c2e;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a0905;
+    font-size: 14px;
+}
+
+body.light .footer {
+    background-color: #d8c3a8;
+}
+
+/*responsivo*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
+
+/*animaçao partículas*/
+@keyframes explodirParticula {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/*estilo partículas*/
+.particula {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explodirParticula 0.8s ease-out forwards;
+}
+
+
+/*exlosao botao*/
+@keyframes impacto {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); background-color: orange; }
+    100% { transform: scale(0.9); }
+}
+
+@keyframes desaparecer {
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.explodir {
+    animation: impacto 0.2s ease, desaparecer 0.5s ease forwards;
+}
+
+/*botao dividido*/
+@keyframes cairEsquerda {
+    to {
+        transform: translate(-150px, 200px) rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+@keyframes cairDireita {
+    to {
+        transform: translate(150px, 200px) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/*metades botao*/
+.metade {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.metade span {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*animações*/
+.metade-esquerda {
+    animation: cairEsquerda 0.8s ease forwards;
+}
+
+.metade-direita {
+    animation: cairDireita 0.8s ease forwards;
+}
