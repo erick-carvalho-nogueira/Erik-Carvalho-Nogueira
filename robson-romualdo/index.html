@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calama Devs Apresentação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <nav>
+            <!-- <img src="img/calama devs logo.png" alt="logo calama devs"> -->
+            <ul>
+                <li><b><a href="#">Início</a></b></li>
+                <li><b><a href="#">Contato</a></b></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- conteudo principal -->
+    <main>
+        <section class="principal">
+            <article>
+                <h1>O que é o Calama Devs?</h1>
+                <p id="descricao">Onde a tecnologia se encontra com a criatividade no coração de Porto Velho. Somos um coletivo de estudantes e pesquisadores do IFRO Calama focados em construir o futuro bit a bit. Se você busca transformar linhas de código em impacto social e projetos práticos, aqui é o seu lugar. Venha codar, prototipar e inovar com a gente!</p>
+            </article>
+
+            <div class="aprender">
+                <h2>Faça parte de time de desenvolvimento do IFRO Campus Calama</h2>
+                <h3>Aqui você aprenderá:</h3>
+                <ul>
+                    <li>Desenvolver projetos reais</li>
+                    <li>Trabalhar em equipe</li>
+                </ul>
+            </div>
+
+            <div class="inscrever">
+                <p id="inscricao">Clique no botão abaixo para fazer sua inscrição. A inscrição é gratuita.</p>
+                <button id="btn-participar">Quero participar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- rodape padrão -->
+    <footer>
+        <p>&copy; 2026 - Calama Devs Apresentação by Robson Romualdo</p>
+    </footer>
+
+    <!-- modal-formulario -->
+    <dialog class="modal-formulario" aria-labelledby="titulo-form">
+        <button class="exit" aria-label="Fechar formulário" title="Fechar">X</button>
+
+        <form action="#" method="dialog">
+            <h2 id="titulo-form">Inscrição para o Grupo</h2>
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div class="field">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Leandro Ferrarezi" required>
+                </div>
+
+                <div class="field">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Área de Interesse</legend>
+                <p>Escolha a área de desenvolvimento:</p>
+
+                <div class="radio-group">
+                    <input type="radio" id="front-end" name="area-dev" value="front">
+                    <label for="front-end">Front-end</label>
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="back-end" name="area-dev" value="back">
+                    <label for="back-end">Back-end</label>
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="ambos" name="area-dev" value="ambos" checked>
+                    <label for="ambos">Ambos</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-enviar">Enviar Inscrição</button>
+        </form>
+    </dialog>
+
+    <!-- modal-enviado -->
+    <dialog class="modal-enviado" role="alert" aria-live="assertive">
+        <button class="exit" aria-label="Fechar alerta" title="Fechar">X</button>
+        <div class="modal-enviado-div">
+            <h2>Inscrição enviada com sucesso!</h2>
+            <span class="sucesso" aria-hidden="true">✔</span>
+            <p>Entraremos em contato para dar as orientações necessárias.</p>
+            <button class="close">Fechar</button>
+        </div>
+    </dialog>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
