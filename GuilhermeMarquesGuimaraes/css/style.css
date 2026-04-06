@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #101010 0%, #151515 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+.topo {
+    background: #003531;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-topo {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 30px;
+}
+
+.hero-texto h2 {
+    font-size: 2.6rem;
+    color: white;
+}
+
+
+.acoes {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.acoes-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.acoes-titulo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.acoes-titulo p {
+    color: #bbbbbb;
+}
+
+
+.acoes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.acao-card {
+    background: #1e1e1e;
+    border: 1px solid #003531;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.acao-card:hover {
+    transform: translateY(-6px);
+}
+
+.acao-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.acao-card p {
+    color: #bbbbbb;
+    margin-bottom: 12px;
+}
+
+
+.botao-secundario {
+    margin-top: 10px;
+    padding: 12px 18px;
+    border: none;
+    background: #003531;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-secundario:hover {
+    background: #01463f;
+}
+
+.pagina-tech {
+    width: 90%;
+    max-width: 1250px;
+    margin: 50px auto 70px;
+}
+
+.cabecalho-tech {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.cabecalho-tech h1 {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+    color: white;
+}
+
+.cabecalho-tech p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #b9b9b9;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.grid-tech {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.secao-tecnologia {
+    background: linear-gradient(180deg, #1c1c1c 0%, #171717 100%);
+    border: 1px solid #003531;
+    border-radius: 18px;
+    padding: 30px 26px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.secao-tecnologia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.28);
+    border-color: #0a5a50;
+}
+
+.secao-tecnologia h2 {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+    color: white;
+    position: relative;
+}
+
+.secao-tecnologia h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin-top: 10px;
+    background: #003531;
+    border-radius: 99px;
+}
+
+.secao-tecnologia p {
+    color: #c2c2c2;
+    line-height: 1.75;
+    margin-bottom: 22px;
+    font-size: 0.98rem;
+}
+
+
+.botao-doc {
+    display: inline-block;
+    padding: 13px 18px;
+    background: #003531;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.botao-doc:hover {
+    background: #01463f;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.rodape {
+    width: 100%;
+    padding: 30px 20px;
+    background: #003531;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+    .hero-texto h2 {
+        font-size: 2rem;
+    }
+
+    .logo-topo {
+        max-width: 320px;
+    }
+
+    .acao-card {
+        width: 90%;
+    }
+
+    .cabecalho-tech h1 {
+        font-size: 2.2rem;
+    }
+
+    .cabecalho-tech p {
+        font-size: 1rem;
+    }
+
+    .pagina-tech {
+        width: 92%;
+        margin: 35px auto 50px;
+    }
+}
