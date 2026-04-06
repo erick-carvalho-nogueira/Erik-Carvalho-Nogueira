@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/styles/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <title>Calama Devs</title>
+</head>
+<body class="bg-black">
+  <div id="header"></div>
+  
+  <main class="p-100">
+    <div class="container">
+      
+      <div class="row mb-5">
+        <div class="col-12">
+          <h1 class="main-title">
+            <span class="text-white">INOVAÇÃO</span><br>
+            <span class="text-white">EM SISTEMAS ACADEMICOS</span>
+          </h1>
+        </div>
+      </div>
+      
+      <div class="row gap-4 gap-md-0">
+        <div class="col-12 col-md-5 pe-md-5">
+          <p class="texto-destaque text-white">
+            A teoria aplicada na prática: nós desenvolvemos soluções que <span class="text-success">geram economia e impacto real para a nossa instituição.</span>
+          </p>
+        </div>
+        <div class="col-12 col-md-7 ps-md-4">
+          <p class="text-white mb-4 font-p">
+            O Calama Devs é um grupo de desenvolvedores de software formado por estudantes e professores do curso de Análise e Desenvolvimento de Sistemas (ADS) do IFRO - Campus Porto Velho Calama, vinculado ao grupo de pesquisa GPMecatrônica.
+          </p>
+          
+          <p class="text-white mb-4 font-p">
+            Liderados por nossos docentes, nosso maior destaque é o PlanIFica. Este sistema completo de gestão de horários automatiza a verificação de choques de aulas, gerencia intervalos e integra dados diretamente das matrizes do Suap.
+          </p>
+          
+          <p class="text-white mb-4 font-p">
+            Unimos tecnologia e vivência acadêmica para converter as demandas reais do campus em soluções web inteligentes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Tirei o Footer provisoriamente por ter pouco conteudo na tela -->
+  <script src="index.js"></script>
+  <script> 
+    fetch('src/components/header.html')
+      .then(response => response.text())
+      .then(data =>{
+        document.getElementById('header').innerHTML = data;
+        marcarLinkAtual();
+      });
+  </script>
+</body>
+</html>
