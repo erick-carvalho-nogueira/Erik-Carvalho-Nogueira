@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatura | CalamaDevs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-candidatura">
+
+    <header class="candidatura-header">
+        <div class="container top-bar-candidatura">
+            <div class="logo">CalamaDevs<span>.</span></div>
+            <span class="spacer"></span> </div>
+
+        <div class="container candidatura-hero">
+            <div class="candidatura-text">
+                <h1>Candidatura</h1>
+                <p>Se você é curioso, comprometido e aberto a aprender junto, inscreva-se preenchendo o formulário a seguir.</p>
+            </div>
+            <div class="candidatura-logo-img">
+                <img src="assets/images/logo-calamadevs.jpg" alt="Logo CalamaDevs">
+            </div>
+        </div>
+    </header>
+
+    <main class="candidatura-main">
+        <div class="container candidatura-content">
+            
+            <div class="candidatura-info">
+                <h2>Quer fazer parte do Calama Dev's?</h2>
+                <p class="intro-p">Como membro do Calama Dev's, você terá a oportunidade de:</p>
+                
+                <ul class="timeline">
+                    <li>Aprender na prática sobre os processos no desenvolvimento de softwares;</li>
+                    <li>Contribuir com projetos de software reais; e</li>
+                    <li>Trabalhar em equipe e compartilhar conhecimento.</li>
+                </ul>
+            </div>
+
+            <div class="form-container">
+                <form id="form-candidatura" iaction="#" method="POST">
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="whatsapp">Whatsapp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+
+                <p id="mensagem-sucesso" class="hidden" style="text-align: center; color: #38a118; font-size: 1.2rem; font-weight: bold; margin-top: 20px;"></p>
+            </div>
+
+        </div>
+
+        <div class="container msg-final">
+            <p>Não é necessário ter experiência prévia: o mais importante é a vontade de participar, ajudar e evoluir em equipe.</p>
+        </div>
+    </main>
+
+    <footer class="candidatura-footer">
+        <div class="container">
+            <h2>Fale com a gente</h2>
+            <p>Tem dúvidas ou quer saber mais? Procure o Professor Leandro e venha conversar conosco.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>#CalamaDevs | Feito por estudantes, para o mundo. 🌍</p>
+        </div>
+    </footer>
+
+    <script src="js/candidatura.js"></script>
+</body>
+</html>
