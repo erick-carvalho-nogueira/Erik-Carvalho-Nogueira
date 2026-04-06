@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calama Devs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <nav class="navegacao">
+            <a href="#" style="text-decoration: none;">Calama Dev's</a>
+        </nav>
+    </header>
+
+    <div id="home">
+        <h1 class="home-title">
+            Aprender, Criar
+            <br>
+            e Crescer.
+        </h1>
+        <p class="home-descricao">
+                Um time focado em compartilhar conhecimento.
+        </p>
+
+        <div class="home-buttons">
+            <button onclick="abrirModal()">Quero fazer parte</button>
+            <button onclick="window.location.href='#sobre'">Saiba mais</button>
+        </div>
+    </div>
+
+    <section id="sobre" class="sobre">
+        <div class="sobre-texto">
+            <h2>
+                Sobre o
+                <br>
+                Calama Dev's</h2>
+            <p>Somos um time de gerentes, analistas e desenvolvedores composto por alunos do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal de Rondônia, Campus Calama.<br>
+            Buscamos desenvolver soluçoes tecnologicas que atendam necessidades reais do campus.</p>
+        </div>
+    </section>
+
+    <section id="participar" class="participar">
+        <h2>Vem para o time!</h2>
+        <p>Como membro do Calama Dev's, você terá a oportunidade de:</p>
+        <ul>
+            <li>Aprender na prática sobre o processo de desenvolvimento de software;</li>
+            <li>Contribuir com projetos de softwares reais;</li>
+            <li>Trabalhar em equipe e compartilhar conhecimento.</li>
+        </ul>
+ 
+        <p>Vem Crescer com o Calama Dev's!</p>
+        <button onclick="abrirModal()">Quero fazer parte</button>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <h2>Quer fazer parte do Calama Dev's?</h2>
+            <p>Se você é curioso, comprometido e aberto a aprender junto,
+                <br>
+                Preencha o formulário abaixo para se inscrever:
+            </p>
+
+            <form id="inscricao">
+                <label>Nome:</label>
+                <input type="text" placeholder="Seu nome" required>
+
+                <label>Email:</label>
+                <input type="email" placeholder="Seu email" required>
+
+                <label>Numero de telefone:</label>
+                <input type="tel" placeholder="Seu telefone" required>
+
+                <p>Funçao de interesse:</p>
+
+                <select title="Área de interesse">
+                    <option>Gerente de projetos</option>
+                    <option>Analista</option>
+                    <option>Dev Front-end</option>
+                    <option>Dev Back-end</option>
+                    <option>Testes / QA</option>
+                </select>
+
+                <br><br>
+
+                <button type="button" onclick="enviar()">Enviar</button>
+                <button type="button" onclick="fecharModal()">Cancelar</button>
+
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>@2026 Calama Dev's</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
